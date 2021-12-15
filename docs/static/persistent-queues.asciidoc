@@ -80,7 +80,7 @@ For more details specific behaviors of queue writes and acknowledgement, see
 
 To configure persistent queues, you can specify the following options in the
 Logstash <<logstash-settings-file,settings file>>.
-The settings will be applied to all pipelines and values are per pipeline.
+The settings will be applied to every pipelines, capacity and sizing settings values are to be intended per pipeline.
 If you want to define them for a specific pipeline, use <<multiple-pipelines, `pipelines.yml`>>.
 
 * `queue.type`: Specify `persisted` to enable persistent queues. By default, persistent queues are disabled (default: `queue.type: memory`).
