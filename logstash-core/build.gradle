@@ -127,9 +127,9 @@ def customJRubyDir = project.hasProperty("custom.jruby.path") ? project.property
 def customJRubyVersion = customJRubyDir == "" ? "" : Files.readAllLines(Paths.get(customJRubyDir, "VERSION")).get(0).trim()
 
 dependencies {
-    compile 'org.apache.logging.log4j:log4j-api:2.12.1'
-    compile 'org.apache.logging.log4j:log4j-core:2.12.1'
-    runtime 'org.apache.logging.log4j:log4j-slf4j-impl:2.12.1'
+    compile 'org.apache.logging.log4j:log4j-api:2.16.0'
+    compile 'org.apache.logging.log4j:log4j-core:2.16.0'
+    runtime 'org.apache.logging.log4j:log4j-slf4j-impl:2.16.0'
     compile('org.reflections:reflections:0.9.11') {
         exclude group: 'com.google.guava', module: 'guava'
     }
@@ -153,7 +153,7 @@ dependencies {
         exclude group: 'com.google.guava', module: 'guava'
     }
     compile 'org.javassist:javassist:3.26.0-GA'
-    testCompile 'org.apache.logging.log4j:log4j-core:2.12.1:tests'
+    testCompile 'org.apache.logging.log4j:log4j-core:2.16.0:tests'
     testCompile 'junit:junit:4.12'
     testCompile 'net.javacrumbs.json-unit:json-unit:2.3.0'
     testCompile 'org.elasticsearch:securemock:1.2'
